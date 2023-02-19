@@ -38,8 +38,8 @@
     position: absolute;
     top: 20%;
     background: #f4c818;
-    height: 75%;
-    width: 50%;
+    height: 100%;
+    width: 75%;
     border-radius: 5%;
 }
 .switch {
