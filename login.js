@@ -19,10 +19,8 @@ const analytics = getAnalytics(app);
 
 import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
-const db = getDatabase();
+const db = getDatabase(app);
 const auth = getAuth();
-var user = auth.currentUser
-
 
 // various user info
 var course_ID = "CPSC 233"
@@ -53,7 +51,7 @@ function course_setup () {
     // inside branch is: prof, times, location
     var user = auth.currentUser
 
-    var professor = "diff"
+    var professor = "Manzara"
     var start_time = "10:00"
     var end_time = "10:50"
     var lecture_section = "L01"
@@ -67,8 +65,7 @@ function course_setup () {
         location: location
     }
 
-    set(ref(db, 'users/'+user.uid/+course_ID), course_data)
-    console.log("Made it to database")
+    set(ref(db, 'users/'+user.uid+'/'+course_ID), course_data)
 
 }
 
