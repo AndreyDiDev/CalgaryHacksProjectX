@@ -1,0 +1,249 @@
+.top {
+    width: 100%;
+    height: 50px;
+    background: rgb(156,5,52);
+}
+.personal-info{
+    position: sticky;
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(to bottom, transparent 30%, rgb(156,5,52) 70%);
+    border-radius: 10%;
+}
+
+.topbutton {
+    border-color: transparent;
+    position: sticky;
+
+}
+
+.profile-picture img{
+    position: relative;
+
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+}
+.events{
+    position: absolute;
+    top: 20%;  
+    background: rgb(156,5,52);
+    height: 100%;
+    width: 50%;
+    border-radius: 5%;
+}
+.calendar{
+    position: absolute;
+    top: 20%;
+    background: rgb(156,5,52);
+    height: 75%;
+    width: 50%;
+    border-radius: 5%;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.searchbar {
+    background: grey;
+    border-radius: 1;
+}
+.cornerprofilepic img{
+    position: absolute;
+    right: 5%;
+    
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    border: 10%;
+}
+.clubs-template{
+    position: absolute;
+    top: 25%;
+
+    background: rgb(156,5,52);
+    height: 80%;
+    width: 80%;
+    border-radius: 5%;
+}
+.socialbutton{
+    border: transparent;
+    background: transparent;
+}
+.socialbutton:hover{
+    color: yellow;
+    border-width: 1px;
+}
+hr{
+    position: relative;
+    top: 20px;
+    border: none;
+    height: 12px;
+    background: black;
+    margin-bottom: 50px;
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+  
+  /* The container <div> - needed to position the dropdown content */
+.dropdown {
+    display: inline-block;
+}
+  
+  /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    right: 5%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .big-br{line-height: 200%;}
+
+.logo{
+    position: absolute;
+    left: 3%;
+    top: 1%;
+}
+.social-buttons{
+    border: transparent;
+    background: transparent;
+}
+.social-buttons:hover{
+    color: yellow;
+}
+.left-clubs{
+    position:relative;
+    left: 5%;
+    top: 5%
+}
+.right-clubs{
+    position:relative;
+    right: 5%;
+    top: 5%
+}
+
+.club-square{
+    position: static;
+
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(to bottom, black 60%, rgb(156,5,52) 60%);
+    border: solid;
+    border-radius: 10%;
+    display: inline-block;
+}
+
+.socials-switch{
+    color: inherit;
+}
+.socials-switch:hover{
+    color: yellow;
+}
+.class-square{
+    position: relative;
+
+    height: 200px;
+    width: 400px;
+    background: linear-gradient(to bottom, black 60%, rgb(156,5,52) 60%);
+    border:solid;
+    border-radius: 10%;
+    display: inline-block;
+}
+
+#new-people{
+    font-family: "Comic Sans MS";
+    font-size: 160%;
+    color: black;
+}
+
+#new-people:hover{
+    color: yellow;
+}
