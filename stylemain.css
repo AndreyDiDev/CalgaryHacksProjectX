@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: lemonchiffon;
   }
   
   .post {
@@ -44,7 +45,7 @@
 }
 header{
     padding: 1.25em 0;
-    background-color: #f4c818;
+    background-color: #fdd63d;
     justify-content: space-between;
     align-items: center;
 }
