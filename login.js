@@ -17,7 +17,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import {getDatabase, ref, set, child, update, remove, get} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
 const db = getDatabase(app);
 const auth = getAuth();
@@ -175,6 +175,29 @@ function validate_field(field) {
     }
 }
 
+function compareCourses(){
+    console.log("pp");
+    var user = auth.currentUser
+
+    const dbRef = ref(getDatabase());
+
+    const db = getDatabase();
+
+    get(ref(db, 'users/'+user.uid)).then((snapshot) => {
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+        } else {
+            console.log("No data available");
+        }
+        }).catch((error) => {
+    console.error(error);
+    });
+
+    console.log(child(dbRef, `users/`))
+    
+}
+
 // signUpBtn.addEventListener('click', register);
 // logInBtn.addEventListener('click', login);
 coursebutton.addEventListener('click', course_setup)
+com.addEventListener('click', compareCourses)
