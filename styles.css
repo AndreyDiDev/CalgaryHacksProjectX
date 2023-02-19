@@ -211,7 +211,7 @@ hr{
 }
 
 .club-square{
-    position: relative;
+    position: static;
 
     height: 200px;
     width: 200px;
@@ -236,4 +236,14 @@ hr{
     border:solid;
     border-radius: 10%;
     display: inline-block;
+}
+
+#new-people{
+    font-family: "Comic Sans MS";
+    font-size: 160%;
+    color: black;
+}
+
+#new-people:hover{
+    color: yellow;
 }
