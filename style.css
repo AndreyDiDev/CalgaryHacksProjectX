@@ -1,0 +1,52 @@
+html{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    margin-top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: black;
+    background-color: #FBCE2E;
+    width: 350px;
+    height: 350px;
+}
+
+/* #loginTitle{
+   margin-bottom: 20px;
+} */
+#loginTitle{
+    font-size: 30px;
+}
+#form-container{
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
+}
+#signup{
+    border: 2px gold;
+}
+#line{
+    border-bottom: 1px solid black;
+}
+#username,
+#password{
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+#signin{
+    border-radius: 5px;
+    padding: 10px 60px;
+    border: none;
+    margin-bottom: 70px;
+    background-color: beige;
+}
+#signin:hover{
+    cursor: pointer;
+    background-color: #cfb65c;
+}
