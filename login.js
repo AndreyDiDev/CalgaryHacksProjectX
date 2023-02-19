@@ -21,12 +21,22 @@ import {getDatabase, ref, set, child, update, remove} from "https://www.gstatic.
 
 const db = getDatabase();
 const auth = getAuth();
+var user = auth.currentUser
 
+// user token variable
+var user_token = user.uid
+console.log(user_token)
+
+// various user info
 var username = document.getElementById("username");
-var password_ID = document.getElementById("password");
+var password_ID = document.getElementById("passwordID");
+var course_ID = "CPSC 233"
 
+// buttons that we will use to call functions
 var signUpBtn = document.getElementById("register");
 var logInBtn = document.getElementById("login");
+var coursebutton = document.getElementById("coursebutton")
+
 
 /*
 function InsertData(){
@@ -43,6 +53,30 @@ function InsertData(){
 }
 */
 
+function course_setup () {
+    // set new branch: name courseID upon input
+    // inside branch is: prof, times, location
+    var user = auth.currentUser
+
+    var professor = "Manzara"
+    var start_time = "10:00"
+    var end_time = "10:50"
+    var lecture_section = "L01"
+    var location = "ST 140"
+
+    var course_data = {
+        professor: professor,
+        start_time: start_time,
+        end_time: end_time,
+        lecture_section: lecture_section,
+        location: location
+    }
+
+    set(ref(db, 'users/'+user_token/+course_ID), course_data)
+    console.log("Made it to database")
+
+}
+
 
 
 // set up our register function
@@ -51,9 +85,6 @@ function register () {
     var email = username.value
     var password = password_ID.value
 
-    console.log(email)
-    console.log(password)
-
     if (validate_email(email) == false || validate_password(password) == false) {
         return
     }
@@ -61,12 +92,9 @@ function register () {
     if ((validate_field(email) == false) || (validate_field(password) == false)) {
         return
     }
-    console.log("we got past the verifications")
-    
+   
     createUserWithEmailAndPassword(auth, email, password).then(function(){
         var user = auth.currentUser
-
-        // var database_ref = db.ref()
 
         var user_data = {
             email: email,
@@ -74,8 +102,8 @@ function register () {
             last_login: Date.now()
         }
     
-        // database_ref.child('users/' + user.uid).set(user_data)
         set(ref(db, 'users/'+user.uid), user_data)
+
         })
         .catch(function(error){
             var error_code = error.error_code
@@ -104,13 +132,10 @@ function login(){
     signInWithEmailAndPassword(auth, email, password).then(function(){
         var user = auth.currentUser
 
-        // var database_ref = db.ref()
-
         var user_data = {
             last_login: Date.now()
         }
     
-        // database_ref.child('users/' + user.uid).update(user_data)
         update(ref(db, 'users/'+user.uid), user_data)
 
     })
@@ -153,6 +178,4 @@ function validate_field(field) {
 
 signUpBtn.addEventListener('click', register);
 logInBtn.addEventListener('click', login);
-
-
-
+coursebutton.addEventListener('click', course_setup)
