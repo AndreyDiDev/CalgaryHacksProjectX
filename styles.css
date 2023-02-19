@@ -133,7 +133,7 @@ input:checked + .slider:before {
     background: transparent;
 }
 .socialbutton:hover{
-    color: yellow;
+    color: #f4c818;
     border-width: 1px;
 }
 hr{
@@ -197,7 +197,7 @@ hr{
     background: transparent;
 }
 .social-buttons:hover{
-    color: yellow;
+    color: #f4c818;
 }
 .left-clubs{
     position:relative;
@@ -225,7 +225,7 @@ hr{
     color: inherit;
 }
 .socials-switch:hover{
-    color: yellow;
+    color: #f4c818;
 }
 .class-square{
     position: relative;
