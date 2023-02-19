@@ -7,8 +7,10 @@
   }
   
   .post {
+    background-color: aliceblue;
     display: inline-block;
-    border: 1px solid green;
+    /* border: 3px solid gray; */
+    border-radius: 8px;
     width: 33.33%;
     height: 100%;
     text-align: center;
@@ -16,6 +18,7 @@
     box-sizing: border-box;
     min-height: 400px;
     min-width: 550px;
+    margin: 5px auto;
   }
   
   .post img {
