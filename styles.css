@@ -237,3 +237,18 @@ hr{
     border-radius: 10%;
     display: inline-block;
 }
+
+.searchbutton {
+    position:relative;
+    height:30px;
+    width:75%;
+}
+
+.searchspace{
+    position:relative;
+    left: 10%;
+    background-color: yellow;
+    height: 500px ;
+    width: 700px ;
+    border-radius: 10%;
+}
