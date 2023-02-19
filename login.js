@@ -23,17 +23,12 @@ const db = getDatabase();
 const auth = getAuth();
 var user = auth.currentUser
 
-// user token variable
-var user_token = user.uid
-console.log(user_token)
 
 // various user info
-var username = document.getElementById("username");
-var password_ID = document.getElementById("passwordID");
 var course_ID = "CPSC 233"
 
 // buttons that we will use to call functions
-var signUpBtn = document.getElementById("register");
+var signUpBtn = document.getElementById("make-account");
 var logInBtn = document.getElementById("login");
 var coursebutton = document.getElementById("coursebutton")
 
@@ -58,7 +53,7 @@ function course_setup () {
     // inside branch is: prof, times, location
     var user = auth.currentUser
 
-    var professor = "Manzara"
+    var professor = "diff"
     var start_time = "10:00"
     var end_time = "10:50"
     var lecture_section = "L01"
@@ -72,24 +67,29 @@ function course_setup () {
         location: location
     }
 
-    set(ref(db, 'users/'+user_token/+course_ID), course_data)
+    set(ref(db, 'users/'+user.uid/+course_ID), course_data)
     console.log("Made it to database")
 
 }
 
-
-
 // set up our register function
 function register () {
     // Get all our input fields
-    var email = username.value
-    var password = password_ID.value
+     var first_name = document.getElementById("firstname").value
+     var last_name = document.getElementById("lastname").value
+     var email = document.getElementById("email").value
+     var password = document.getElementById("password").value
+     var year_of_study = document.getElementById("year").value
+     var major = document.getElementById("major").value
+     var interests = document.getElementById("interests").value
 
     if (validate_email(email) == false || validate_password(password) == false) {
+        console.log("error 1")
         return
     }
     
     if ((validate_field(email) == false) || (validate_field(password) == false)) {
+        console.log("error 2")
         return
     }
    
@@ -97,8 +97,13 @@ function register () {
         var user = auth.currentUser
 
         var user_data = {
+            "first name": first_name,
+            "last name": last_name,
             email: email,
             password: password,
+            "year of study": year_of_study,
+            major: major,
+            interests: interests,
             last_login: Date.now()
         }
     
@@ -111,11 +116,8 @@ function register () {
             console.log("the error is in the register")
             alert(error_message)
         })
-
-    console.log("we got thru to the database")
     
 }
-
 
 function login(){
     var email = username.value
@@ -176,6 +178,6 @@ function validate_field(field) {
     }
 }
 
-signUpBtn.addEventListener('click', register);
-logInBtn.addEventListener('click', login);
+// signUpBtn.addEventListener('click', register);
+// logInBtn.addEventListener('click', login);
 coursebutton.addEventListener('click', course_setup)
