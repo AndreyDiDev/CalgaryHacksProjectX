@@ -252,3 +252,10 @@ hr{
     width: 700px ;
     border-radius: 10%;
 }
+
+.club-img{
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50px;
+}
