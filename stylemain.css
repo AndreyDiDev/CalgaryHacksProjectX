@@ -14,7 +14,8 @@
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
-    min-height: ;
+    min-height: 400px;
+    min-width: 550px;
   }
   
   .post img {
@@ -33,3 +34,70 @@
     color: gray;
   }
   
+  .subheading {
+    display: block;
+    font-size: 1rem;
+    color: #d0aaff;
+}
+header{
+    padding: 1.25em 0;
+    background-color: #f4c818;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+nav a {
+    color: rgb(73, 61, 61);
+    text-decoration: none;
+    font-size: 1.125rem;
+    padding: 0.85em 0;
+    display: block;
+}
+a {
+    color: #ef5839;
+    text-decoration: underline dotted; 
+}
+
+a:hover, 
+a:active {
+    color: black;
+}
+.container {
+    width: 100%;
+    overflow: hidden; /* This prevents the container from collapsing */
+  }
+  
+  .left {
+    float: left;
+    width: 50%; /* Set the width of each div to 50% */
+  }
+  
+  .right {
+    float: right;
+    width: 50%;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+header .container,
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin-left: 1.25em;
+}
+h1{
+    color: rgb(66, 66, 66);
+}
+.subheading{
+     color: rgb(66, 66, 66);
+}

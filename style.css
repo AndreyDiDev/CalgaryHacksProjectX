@@ -26,12 +26,6 @@ html{
     margin-top: 100px;
     /* margin-bottom: 100px; */
 }
-#signup{
-    border: 2px gold;
-}
-#line{
-    border-bottom: 1px solid black;
-}
 #username,
 #password{
     margin-bottom: 10px;
